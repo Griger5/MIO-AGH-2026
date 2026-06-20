@@ -1,0 +1,38 @@
+[project]
+name = "mio-ecg-compression"
+version = "0.1.0"
+description = "MLP autoencoder pipeline for ECG heartbeat compression experiments."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "kaggle>=1.6",
+    "matplotlib>=3.9",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "seaborn>=0.13",
+    "torch>=2.4",
+    "tqdm>=4.66",
+]
+
+[project.scripts]
+ecg-train = "ecg_compression.train:main"
+ecg-evaluate = "ecg_compression.evaluate:main"
+ecg-infer = "ecg_compression.infer:main"
+ecg-best-model = "ecg_compression.best_model:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ecg_compression"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
