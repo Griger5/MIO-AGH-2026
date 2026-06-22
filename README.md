@@ -2,7 +2,7 @@
 
 Projekt do kursu MIO: kompresja danych EKG za pomoca sztucznej sieci neuronowej typu MLP.
 
-Autorzy: wpiszcie sklad zespolu przed oddaniem projektu.
+Autorzy: Kacper Wojtowicz, Dominik Godek, Gracjan Adamus, Rafał Wybraniec
 
 ## Cel
 
@@ -186,22 +186,3 @@ make test
 ```
 
 Testy uzywaja syntetycznych sygnalow EKG, wiec nie wymagaja datasetu Kaggle.
-
-## Material do sprawozdania
-
-W sprawozdaniu warto opisac:
-
-- format danych MIT-BIH z Kaggle;
-- preprocessing: oddzielenie etykiety, split walidacyjny, analiza zero-paddingu;
-- architekture autoenkodera MLP;
-- badane rozmiary bottlenecka `K`;
-- porownanie MLP z PCA;
-- wykresy `CR vs PRD` i `CR vs QS`;
-- przykladowe rekonstrukcje sygnalu;
-- obserwacje per klasa MIT-BIH.
-
-Podstawowe zrodla do cytowania:
-
-- Kachuee, M., Fazeli, S., Sarrafzadeh, M. "ECG Heartbeat Classification: A Deep Transferable Representation", 2018.
-- Moody, G.B., Mark, R.G. "The impact of the MIT-BIH Arrhythmia Database", 2001.
-- Goodfellow, Bengio, Courville, "Deep Learning", rozdzial o autoenkoderach.
